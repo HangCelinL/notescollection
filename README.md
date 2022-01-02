@@ -4,4 +4,4 @@ My first personal project. First commmit included setup of web server, spring my
 The final product will be a website which will serve as a personal wikipendium. It will be a collection of my notes for my subjects. 
 
 ## Language and tools
-Backend is built with java, spring, hibernate and mySQL database. Planning to build project with React.js.
+Backend is built with java, spring, hibernate and mySQL database. Planning to build frontend with React.js.
