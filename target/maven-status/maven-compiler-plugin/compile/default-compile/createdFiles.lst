@@ -1,0 +1,10 @@
+spring/service/SubjectService.class
+spring/SubjectsApp.class
+core/Subcategory.class
+links/SubjectLinks.class
+spring/hibernate/Hibernateutil.class
+spring/config/SpringConfig.class
+spring/WebInitializer.class
+spring/service/SubjectRepository.class
+spring/controller/WelcomeController.class
+core/Subject.class
