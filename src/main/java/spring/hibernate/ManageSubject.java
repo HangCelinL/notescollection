@@ -12,8 +12,7 @@ import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import core.Subcategory;
-import core.Subject;
+import spring.core.Subject;
 
 public class ManageSubject {
 
@@ -51,7 +50,8 @@ public class ManageSubject {
       for (Iterator<Subject> iterator = subjects.iterator(); iterator.hasNext();) {
         Subject subject = (Subject) iterator.next();
         System.out.print("Name: " + subject.getName());
-        System.out.print("  Subcategories: " + Arrays.toString(subject.getSubCategories().toArray()));
+        // System.out.print(" Subcategories: " +
+        // Arrays.toString(subject.getSubCategories().toArray()));
         System.out.println("  SubjectID: " + subject.getSubjectId());
       }
       tx.commit();
@@ -96,19 +96,20 @@ public class ManageSubject {
 
     /* Add few subject records in database */
 
-    Collection<Subcategory> algdatSubs = new ArrayList<Subcategory>();
+    /*
+     * Collection<Subcategory> algdatSubs = new ArrayList<Subcategory>();
+     * 
+     * Collection<Subcategory> operativSubs = new ArrayList<Subcategory>();
+     * 
+     * Collection<Subcategory> KTNSubs = new ArrayList<Subcategory>();
+     */
+    Subject algdat = new Subject("Algdat", 4120);
+    // algdat.addSubCategory(new Subcategory("dynamisk programmering"));
 
-    Collection<Subcategory> operativSubs = new ArrayList<Subcategory>();
+    Subject operativsystemer = new Subject("Operativsystemer", 4186);
+    // operativsystemer.addSubCategory(new Subcategory("macOS"));
 
-    Collection<Subcategory> KTNSubs = new ArrayList<Subcategory>();
-
-    Subject algdat = new Subject("Algdat", algdatSubs, 4120);
-    algdat.addSubCategory(new Subcategory("dynamisk programmering"));
-
-    Subject operativsystemer = new Subject("Operativsystemer", operativSubs, 4186);
-    operativsystemer.addSubCategory(new Subcategory("macOS"));
-
-    Subject ktn = new Subject("KTN", KTNSubs, 4100);
+    Subject ktn = new Subject("KTN", 4100);
 
     Integer id1 = MS.addSubject(algdat);
     Integer id2 = MS.addSubject(operativsystemer);

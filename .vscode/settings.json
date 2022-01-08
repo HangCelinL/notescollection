@@ -1,4 +1,5 @@
 {
   "java.configuration.updateBuildConfiguration": "automatic",
-  "xml.extension.jars": []
+  "xml.extension.jars": [],
+  "maven.view": "hierarchical"
 }

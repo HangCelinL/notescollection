@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import core.Subject;
+import spring.core.Subject;
 
 @Component
 public class SubjectService {

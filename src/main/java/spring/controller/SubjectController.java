@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import core.Subject;
-import links.SubjectLinks;
 import lombok.extern.slf4j.Slf4j;
-
+import spring.core.Subject;
+import spring.links.SubjectLinks;
 import spring.service.SubjectService;
 
 @Slf4j
@@ -32,7 +31,7 @@ public class SubjectController {
 
   @PostMapping(path = SubjectLinks.ADD_SUBJECT)
   public ResponseEntity<?> saveUser(@RequestBody Subject subject) {
-    log.info("UsersController:  list users");
+    log.info("SubjectController:  list subjects");
     Subject resource = subjectService.saveSubject(subject);
     return ResponseEntity.ok(resource);
   }

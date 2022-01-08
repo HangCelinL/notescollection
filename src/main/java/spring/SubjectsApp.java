@@ -2,9 +2,10 @@ package spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
+@EntityScan("spring.core")
+@SpringBootApplication
 public class SubjectsApp {
 
   public static void main(String[] args) {

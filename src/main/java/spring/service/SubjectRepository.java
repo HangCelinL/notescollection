@@ -6,11 +6,10 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import core.Subject;
+import spring.core.Subject;
 
 @RepositoryRestResource()
 public interface SubjectRepository
-    extends JpaRepository<Subject, Integer>, JpaSpecificationExecutor<Subject>,
-    QuerydslPredicateExecutor<Subject> {
+    extends JpaRepository<Subject, Integer>, JpaSpecificationExecutor<Subject> {
 
 }
