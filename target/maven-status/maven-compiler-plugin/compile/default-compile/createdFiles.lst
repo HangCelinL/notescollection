@@ -8,5 +8,4 @@ spring/WebInitializer.class
 spring/service/SubjectRepository.class
 spring/links/SubjectLinks.class
 spring/hibernate/ManageSubject.class
-spring/core/Subcategory.class
 spring/controller/WelcomeController.class
